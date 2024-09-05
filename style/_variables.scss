@@ -1,0 +1,83 @@
+$f100: GmarketSansLight;
+$f400: GmarketSansMedium;
+$f700: GmarketSansBold;
+
+$url: "../img/";
+
+$mobile: 430px;
+$tablet: 768px;
+$desktop: 1240px;
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin inner {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@keyframes textAnime {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@keyframes topAni {
+    from {
+        transform: translatey(0px);
+    }
+    to {
+        transform: translatey(-20px);
+    }
+}
+
+@keyframes moveAni {
+    from {
+        transform: translatex(0px);
+    }
+    to {
+        transform: translatex(-20px);
+    }
+}
+
+@keyframes rotateAni {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-15deg);
+    }
+}
+
+@keyframes rotateAni2 {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}

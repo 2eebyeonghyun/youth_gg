@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+html {scroll-behavior: smooth;}
+body {font-size: 100%; background-color: #fff;}
+*{color: #222; box-sizing: border-box; letter-spacing: -0.05em;}
+img{width: 100%; max-width: 100%; height: 100%; object-fit: cover;}
+
+body.bodyOn{overflow: hidden;}
+
+/* SWIPER 슬라이드 영역 */
+.swiper-slide {text-align: center; font-size: 18px; display: flex; justify-content: center; align-items: center;}
+
+.swiper-container {width: 100%; height: 100vh; overflow: hidden; position: relative;}
+.swiper-container .swiper-slide {background-position: center center; background-size: cover; text-align: center; font-size: 18px; background: #fff; display: flex; justify-content: center; align-items: center; position: relative;}
+
+.swiper-options{position: absolute; top: 60%; left: 0; transform: translateY(-50%); z-index: 10; width: 100%;}
+.swiper-options .inner{width: 100%; max-width: 1440px; margin: 0 auto; text-align: left; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center;}
+
+.swiper-options .swiper-arrows{display: inline-block; margin-left: 30px;}
+.swiper-options .swiper-arrows .swiper-button-next,
+.swiper-options .swiper-arrows .swiper-button-prev{position: relative; margin: 0; width: auto; height: auto; color: #fff; display: inline-block;}
+.swiper-options .swiper-arrows .swiper-button-prev,
+.swiper-options .swiper-arrows .swiper-rtl .swiper-button-next{left: auto; margin-right: 15px;}
+.swiper-options .swiper-arrows .swiper-button-next,
+.swiper-options .swiper-arrows .swiper-rtl .swiper-button-prev{right: auto;}
+.swiper-options .swiper-arrows .swiper-button-next:after,
+.swiper-options .swiper-arrows .swiper-button-prev:after{font-family: axicon; font-size: 27px;}
+.swiper-options .swiper-arrows .swiper-button-prev:after,.swiper-options .swiper-arrows .swiper-rtl .swiper-button-next:after{content: '\f16f';}
+.swiper-options .swiper-arrows .swiper-button-next:after,.swiper-options .swiper-arrows .swiper-rtl .swiper-button-prev:after{content: '\f197';}
+
+/* 상단 스크롤 버튼 */
+.gotop {width: 48px; height: 48px; border: 1px solid #eee; background-color: #fff; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.06); position: fixed; bottom: 60px; right: 60px; transition: all 0.3s ease-in-out; opacity: 0; transform: translate3d(0, 30px, 0); cursor: pointer; z-index: 100; display: flex; justify-content: center; align-items: center;}
+.gotop.fix {opacity: 1; transform: translate3d(0, 0, 0);}
+.gotop i {font-size: 24px; color: #000;}
+.gotop:hover {background-color: rgba(0, 0, 0, 0.8); border-radius: 100%;}
+.gotop:hover i {color: #fff;}
+
+@media all and (max-width: 430px){
+  .gotop{width: 40px; height: 40px; bottom: 30px; right: 10px;}
+}
